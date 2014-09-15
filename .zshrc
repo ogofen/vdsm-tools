@@ -6,7 +6,6 @@
 #
 
 # Source Prezto.
-clear
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
@@ -28,18 +27,6 @@ alias less!="vim -u NONE -R /var/log/vdsm/vdsm.log -S /root/vdsm.vim '+set nonu'
  alias monitor="/root/.monitor"
  alias yum="noglob yum"
 # Customize to your needs...
-OK=$(cat /root/vsyntax/Ok.txt)
-CLASS=$(cat /root/vsyntax/class.txt)
-FILE=$(cat /root/vsyntax/file.txt)
-REG=$(cat /root/vsyntax/regular.txt)
-ERR=$(cat /root/vsyntax/Err.txt)
-FUNC=$(cat /root/vsyntax/_vdsmAPI.txt)
-export OK
-export CLASS
-export REG
-export ERR
-export FUNC
-export FILE
 bind -r "\C-s" > /dev/null 2>&1
 stty -ixon > /dev/null 2>&1
 
