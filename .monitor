@@ -7,24 +7,6 @@ if [ ! $flag ]; then
 	echo please install ack package via \"yum install ack\"
 	exit
 fi
-
-export IP="$(ifconfig | grep -A 1 'rhevm' | tail -1 | cut -d ':' -f 2 | cut -d ' ' -f 1)"
-if [ ! $IP ]; then
-	export IP="$(ifconfig | grep -A 1 'ovirtmgmt' | tail -1 | cut -d ':' -f 2 | cut -d ' ' -f 1)"
-fi
-
-echo initializing, please wait a moment... 
-echo "(today's tip: black backgroud)"
-
-
-printf "\n\n"
-echo monitoring host:$IP
-
-
-cd ..
-echo thanx for using "ogofen's" monitor script
-
-
 pkill -9 tail
 pkill -9 ack
 tail -s .5 -n 10 -f /var/log/vdsm/vdsm.log|ack --passthru --color  " [a-z][a-z]{2,6}[A-Z][a-zA-Z]{2,15}|\(spUUI.*\)" --color-match="bold blue"|ack --passthru --color  "ERROR|Traceback" --color-match="bold red"|ack --passthru --color  "DEBUG|INFO" --color-match="bold white"|ack --passthru --color  "[A-Z][a-z]{2,11}\.[A-Z][a-zA-Z]{2,15}|/.Owner" --color-match="bold cyan"|ack --passthru --color  "\[[0-9a-z]{6,12}\]" --color-match="bold magenta"|ack --passthru --color  "2014.{15}|Thread.{3,4}|Dummy.{3,5}" --color-match="bold yellow"
