@@ -26,6 +26,7 @@ alias less!="vim -u NONE -R /var/log/vdsm/vdsm.log -S /root/vdsm.vim '+set nonu'
  alias vi="vim"
  alias monitor="/root/.monitor"
  alias yum="noglob yum"
+ alias find="noglob find"
 # Customize to your needs...
 bind -r "\C-s" > /dev/null 2>&1
 stty -ixon > /dev/null 2>&1
