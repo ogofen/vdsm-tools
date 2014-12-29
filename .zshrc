@@ -5,8 +5,8 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 OS=`gawk {'print $7'} /etc/redhat-release`
-if [[ $OS > '6.6' ]]; then                                                                    │[root@alma04 yum.repos.d]# cat rhel- |grep epel                                                
-   chkconfig NetworkManager off 2>/dev/null 1>&2                                             │rhel-7.0.repo           rhel-optional-7.0.repo  rhel-z-stream-7.0.repo
+if [[ $OS > '6.6' ]]; then                                                                                                                 
+   chkconfig NetworkManager off 2>/dev/null 1>&2                                      
 fi       
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
