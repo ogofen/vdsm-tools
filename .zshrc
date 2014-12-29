@@ -4,8 +4,10 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-T=`gawk {'print $7'} /etc/redhat-release`
-OS=$T[1]
+OS=`gawk {'print $7'} /etc/redhat-release`
+if [[ $OS > '6.6' ]]; then                                                                    │[root@alma04 yum.repos.d]# cat rhel- |grep epel                                                
+   chkconfig NetworkManager off 2>/dev/null 1>&2                                             │rhel-7.0.repo           rhel-optional-7.0.repo  rhel-z-stream-7.0.repo
+fi       
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
