@@ -13,7 +13,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 plugins=(git)
-ZSH_THEME="bira"
 setopt extended_glob > /dev/null 2>&1
 bindkey -s "^[e" "^qgit_prompt_info\n" > /dev/null 2>&1
 set agnoster
@@ -31,4 +30,5 @@ alias less!="vim -u NONE -R /var/log/vdsm/vdsm.log -S /root/vdsm.vim '+set nonu'
 # Customize to your needs...
 bind -r "\C-s" > /dev/null 2>&1
 stty -ixon > /dev/null 2>&1
+alias puppet-vdsm-clean='echo "1">cleanflag;puppet agent -t'
 
