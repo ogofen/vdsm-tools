@@ -3,6 +3,7 @@ OS=`gawk {'print $7'} /etc/redhat-release`
 if [[ $OS > '6.6' ]]; then                                                                                                                 
    chkconfig NetworkManager off 2>/dev/null 1>&2                                      
 fi    
+chsh -s /bin/zsh root
 # User specific aliases and functions
 alias rm='rm -i'
 alias cp='cp -i'
