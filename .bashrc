@@ -13,3 +13,4 @@ alias less!="vim -u NONE -R /var/log/vdsm/vdsm.log -S /root/vdsm.vim '+set nonu'
 # User specific aliases and functions
 alias vi="vim"
 alias monitor="/root/.monitor"
+alias puppet-vdsm-clean='echo "1">cleanflag;puppet agent -t'
