@@ -19,6 +19,7 @@ setopt extended_glob > /dev/null 2>&1
 bindkey -s "^[e" "^qgit_prompt_info\n" > /dev/null 2>&1
 set agnoster
 #set +oglob
+export DISABLE_AUTO_TITLE=true
 autoload -Uz promptinit > /dev/null 2>&1
 promptinit > /dev/null 2>&1
 prompt adam1 > /dev/null 2>&1
