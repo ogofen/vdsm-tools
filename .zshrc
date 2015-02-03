@@ -36,4 +36,6 @@ alias less!="vim -u NONE -R /var/log/vdsm/vdsm.log -S /root/vdsm.vim '+set nonu'
 bind -r "\C-s" > /dev/null 2>&1
 stty -ixon > /dev/null 2>&1
 alias puppet-vdsm-clean='echo "1">cleanflag;puppet agent -t'
-
+HISTSIZE=5000 # session history size
+SAVEHIST=1000 # saved history
+HISTFILE=~/.zshistory # history file
