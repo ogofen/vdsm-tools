@@ -4,12 +4,6 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-OS=`gawk {'print $7'} /etc/redhat-release`
-if [[ $OS > '6.6' ]]; then                                                                                                                 
-   chkconfig NetworkManager off 2>/dev/null 1>&2   
-   service NetworkManager stop
-   setenforce 0
-fi       
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
