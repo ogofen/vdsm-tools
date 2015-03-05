@@ -1,6 +1,6 @@
 #!/bin/bash
 ### monitor vdsm-host
-
+FileSize=0
 export flag=$(which ack)
 if [ ! $flag ]; then
 	echo ack command has not been found,exiting...
